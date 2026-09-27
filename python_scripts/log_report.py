@@ -9,7 +9,7 @@ from datetime import datetime
 directory = sys.argv[1]
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 report_path = os.path.join(directory, f"log_summary_{timestamp}.txt")
-archive_path = os.path.join(directory, f"archive_{timestamp}.tar.gz")
+archive_path = os.path.join(os.getcwd(), f"archive_{timestamp}.tar.gz")
 
 log_files = glob.glob(os.path.join(directory, "*.log"))
 
