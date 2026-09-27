@@ -12,6 +12,6 @@ for file in "$DIR"/*.log; do
     echo "$file: $lines lines" >> "$REPORT"
 done
 
-tar -czf "$ARCHIVE" "$DIR"/*.log
+tar -czf "$PWD/archive_$TIMESTAMP.tar.gz" "$DIR"/*.log
 
 cat "$REPORT"
